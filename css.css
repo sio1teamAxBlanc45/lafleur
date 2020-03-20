@@ -1,5 +1,5 @@
 .body{
-    background-color: #cdfabd  ;
+    
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 10px;
@@ -23,3 +23,37 @@ footer{
     text-decoration-color: #259a28;
 }
 
+.navbar{
+    background-color: #ffc098;
+}
+
+.div-contenu{
+    background-color: #ffc0cb;
+    width: 90%;
+}
+
+
+.menu{
+    width: 10%;
+}
+
+.test{
+    display: flex;
+}
+
+
+
+.vertical-menu a {
+  background-color: #ffc098;
+  display: block; 
+  padding: 8px; 
+}
+
+.nos-produits{
+    font-weight: bold;
+    color: #790000  ;
+}
+.onglets{
+    text-decoration: underline !important;
+    color: black;
+}
