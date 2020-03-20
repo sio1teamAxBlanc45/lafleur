@@ -1,0 +1,25 @@
+.body{
+    background-color: #cdfabd  ;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+
+header{
+    text-align: center;
+    background-color: #58ac3d;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    background-color: #58ac3d;
+    font-weight: bold;
+}
+
+.titre{
+    text-decoration: underline;
+    text-decoration-color: #259a28;
+}
+
