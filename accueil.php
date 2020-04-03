@@ -1,4 +1,9 @@
 <?php
+  include 'Connexion.php';
+
+
+
+
 
 ?>
 
@@ -16,7 +21,6 @@
         
 
     
-    
     <body class='body'>
         
         <header>
@@ -27,36 +31,33 @@
         </header>
         
 
-        <div class="test">
+        <div class="content">
 
           <div class="menu">
             
             <div>
-            <form action="accueil.php">
-                        <input type="hidden" name="ref" value="accueil"><input type="submit" value="Accueil" class="link-lookalike"></form>
+                    
+                    <a class="onglets"> 
+                        <form >
+                            <input type="hidden" name="ref" value="accueil.php"><input type="submit" value="Accueil" class="link-lookalike link-lookalike-acceuil"></form> 
                     </a>
-                        
-                   
-                   
-                   <b class="nos-produits"> Nos produits :</b>
-                   
-                   
-                   
-                    <a class="onglets vertical-menu"> 
-                        <form action="tableau.php">
+                  
+
+                    <b class="nos-produits">Nos produits</b>
+                    <br>
+                    
+                    <a class="onglets test" > 
+                        <form action="listpdt.php">
                             <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike"></form> 
                     </a>
-                   
-                 
-                   
-                    <a class="onglets vertical-menu"> 
-                        <form action="tableau.php">
+                    
+                    <a class="onglets"> 
+                        <form action="listpdt.php">
                             <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike"></form>
                     </a>
-                   
-                   
-                    <a class="onglets vertical-menu"> 
-                        <form action="tableau.php">
+                    
+                    <a class="onglets"> 
+                        <form action="listpdt.php">
                             <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike"></form> 
                     </a>
             </div>
@@ -84,6 +85,6 @@
         <footer>
             <h2 class="pied_page">® copyrights Votre nom réalisé le ...</h2>
         </footer>
-
+        
     </body>
 </html>
