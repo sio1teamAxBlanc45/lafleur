@@ -43,7 +43,7 @@ footer{
     width: auto;
 }
 
-.test{
+.content{
     display: flex;
 }
 
@@ -78,9 +78,8 @@ footer{
     font-weight: bold;
     font-style: italic;
     font-size: 110%;
-    color: #790000  ;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    color: #790000;
+    
 }
 
 .nos-produits:hover{
@@ -123,6 +122,24 @@ footer{
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0px;
+    padding-top: 5%;
+    padding-left: 2%;
     text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
+
+.link-lookalike-acceuil{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-top: 5%;
+    padding-left: 5%;
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
+
+.table-contenu{
+    display: inline-table;
 }
