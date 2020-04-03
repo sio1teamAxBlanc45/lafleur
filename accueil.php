@@ -36,26 +36,22 @@
             </a>
           
 
-            <b class="nos-produits">Nos produits</b>
-            <br>
-            
-            <a class="onglets test" > 
-                <form action="listpdt.php">
-                    <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike">
-                </form> 
-            </a>
-            
-            <a class="onglets"> 
-                <form action="listpdt.php">
-                    <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike">
-                </form>
-            </a>
-            
-            <a class="onglets"> 
-                <form action="listpdt.php">
-                    <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike">
-                </form> 
-            </a>
+            <b class="nos-produits" >Nos produits </b>
+              <?php
+              $req = 'SELECT cat_libelle FROM categorie'; 
+              
+              $menu = $connection ->query($req);    
+              
+              while($ligne = $menu->fetch()) { ?>   
+                <a class="onglets">
+                  <form action="tableau.php">
+                      <input type="hidden" name="ref" <?php echo 'value="'.$ligne['cat_libelle'].'"'?>><input type="submit" <?php echo 'value="'.$ligne['cat_libelle'].'"'?> class="link-lookalike ">
+                  </form>
+                </a>
+              <?php 
+              }  
+              ?>
+              
           </div>
           
           <div>
