@@ -1,7 +1,14 @@
 <?php
-
-require 'Connexion.php'
-
+    require 'Connexion.php';
+    session_start();
+    
+    if (isset($_SESSION['sql'])){
+    
+    $sql = $_SESSION['sql'];
+    $table = $connection->query($sql) or die (print_r($connection->errorInfo()));
+    $nbligne = $table->rowcount();
+    $rowall = $table->fetchAll();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,23 +36,72 @@ require 'Connexion.php'
 
         <div class="test">
 
-          <div class="menu">
+            <div class="menu">
             
-            <div class="vertical-menu">
-              <a class="onglets" href="#">Accueil</a>
-              <a class="nos-produits" href="#">Nos produits</a>
-              <a class="onglets" href="#">Bulbes</a>
-              <a class="onglets" href="#">Plantes à massif</a>
-              <a class="onglets" href="#">Rosiers</a>
+                <div class="vertical-menu">
+                    <a class="onglets" href="#">Accueil</a>
+                    <a class="nos-produits" href="#">Nos produits</a>
+                    
+                    <a class="onglets"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike"></form> 
+                    </a>
+                    
+                    <a class="onglets"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike"></form>
+                    </a>
+                    
+                    <a class="onglets"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike"></form> 
+                    </a>
+                </div>
             </div>
-          </div>
           
-          <div class='div-contenu'>
-              
-              xxxx
-          </div>
+            <div class='div-contenu'>
+               
+            <?php
+               
+               if(isset($_SESSION['sql'])){
+               
+               if ($nbligne !=0)
+                {
+            ?>
+                <table border="1">
+                    <thead>
+                        <tr>    
+                            <th>Photo</th>
+                            <th>Référence</th>
+                            <th>Désignation</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <?php
+                    foreach ($rowall as $row)
+                    {
+                    
+            ?>
+                    <tr>
+                        <td> <img src=<?php echo 'Images'.'&#92;'.$row['pdt_image'].'.JPG' ?> ></td>
+                        <td> <?php echo $row['pdt_ref'] ?></td>
+                        <td> <?php echo $row['pdt_designation'] ?></td>
+                        <td> <?php echo $row['pdt_prix'] ?></td>
+                    </tr>
+            <?php 
+                        }
+                    }
+            }
+            ?>      
+                    </tbody>        
+                </table>                
+ 
+                             
+            </div>   
+        </div>
 
-      </div>
+     
 
 
         <footer>
