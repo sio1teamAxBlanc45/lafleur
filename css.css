@@ -57,3 +57,10 @@ footer{
     text-decoration: underline !important;
     color: black;
 }
+
+.link-lookalike {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+}
