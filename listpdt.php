@@ -39,20 +39,31 @@
             <div class="menu">
             
                 <div class="vertical-menu">
-                    <a class="onglets" href="#">Accueil</a>
-                    <a class="nos-produits" href="#">Nos produits</a>
-                    
-                    <a class="onglets"> 
+                    <a class="onglets vertical-menu" >
+                    <form action="accueil.php">
+                        <input type="hidden" name="ref" value="accueil"><input type="submit" value="Accueil" class="link-lookalike"></form>
+                    </a>
+                        
+                   
+                   
+                   <b class="nos-produits"> Nos produits :</b>
+                   
+                   
+                   
+                    <a class="onglets vertical-menu"> 
                         <form action="tableau.php">
                             <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike"></form> 
                     </a>
-                    
-                    <a class="onglets"> 
+                   
+                 
+                   
+                    <a class="onglets vertical-menu"> 
                         <form action="tableau.php">
                             <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike"></form>
                     </a>
-                    
-                    <a class="onglets"> 
+                   
+                   
+                    <a class="onglets vertical-menu"> 
                         <form action="tableau.php">
                             <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike"></form> 
                     </a>

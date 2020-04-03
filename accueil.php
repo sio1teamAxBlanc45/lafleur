@@ -1,9 +1,4 @@
 <?php
-  include 'Connexion.php';
-
-
-
-
 
 ?>
 
@@ -21,6 +16,7 @@
         
 
     
+    
     <body class='body'>
         
         <header>
@@ -31,40 +27,38 @@
         </header>
         
 
-        <div class="content">
+        <div class="test">
 
           <div class="menu">
             
             <div>
-              <a class="onglets vertical-menu-accueil" href="accueil.php">Accueil</a>
-              <a class="nos-produits vertical-menu-produit" href="#">Nos produits</a>
-              <a class="onglets vertical-menu" href="listpdt.php">
-                <?php
-
-                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='bul'")or die(print_r($connection->errorInfo()));
-                $donnees = $sql->fetch();
-                echo $donnees['cat_libelle'];
-
-                ?>
-              </a>
-              <a class="onglets vertical-menu" href="listpdt.php">
-                <?php
-
-                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='mas'")or die(print_r($connection->errorInfo()));
-                $donnees = $sql->fetch();
-                echo $donnees['cat_libelle'];
-
-                ?> 
-              </a>
-              <a class="onglets vertical-menu" href="listpdt.php">
-                <?php
-
-                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='ros'")or die(print_r($connection->errorInfo()));
-                $donnees = $sql->fetch();
-                echo $donnees['cat_libelle'];
-
-                ?>
-              </a>
+            <form action="accueil.php">
+                        <input type="hidden" name="ref" value="accueil"><input type="submit" value="Accueil" class="link-lookalike"></form>
+                    </a>
+                        
+                   
+                   
+                   <b class="nos-produits"> Nos produits :</b>
+                   
+                   
+                   
+                    <a class="onglets vertical-menu"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike"></form> 
+                    </a>
+                   
+                 
+                   
+                    <a class="onglets vertical-menu"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike"></form>
+                    </a>
+                   
+                   
+                    <a class="onglets vertical-menu"> 
+                        <form action="tableau.php">
+                            <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike"></form> 
+                    </a>
             </div>
           </div>
           
@@ -90,6 +84,6 @@
         <footer>
             <h2 class="pied_page">® copyrights Votre nom réalisé le ...</h2>
         </footer>
-        
+
     </body>
 </html>
