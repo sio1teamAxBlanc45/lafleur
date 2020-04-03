@@ -9,6 +9,7 @@
     $nbligne = $table->rowcount();
     $rowall = $table->fetchAll();
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -44,24 +45,23 @@
               </a>
 
               <b class="nos-produits" >Nos produits </b>
-
-              <a class="onglets"> 
-                  <form action="tableau.php">
-                      <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike ">
-                  </form> 
-              </a>
+              <?php
+              $req = 'SELECT cat_libelle FROM categorie'; 
               
-              <a class="onglets"> 
+              $menu = $connection ->query($req);    
+              
+              while($ligne = $menu->fetch()) { ?>   
+                <a class="onglets">
                   <form action="tableau.php">
-                      <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike">
+                      <input type="hidden" name="ref" <?php echo 'value="'.$ligne['cat_libelle'].'"'?>><input type="submit" <?php echo 'value="'.$ligne['cat_libelle'].'"'?> class="link-lookalike ">
                   </form>
-              </a>
+                </a>
+              <?php 
+              }  
+              ?>
               
-              <a class="onglets"> 
-                  <form action="tableau.php">
-                      <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike">
-                  </form> 
-              </a>  
+
+              
             </div>
 
             <div>
