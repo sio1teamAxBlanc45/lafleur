@@ -1,4 +1,9 @@
 <?php
+  include 'Connexion.php';
+
+
+
+
 
 ?>
 
@@ -26,16 +31,40 @@
         </header>
         
 
-        <div class="test">
+        <div class="content">
 
           <div class="menu">
             
             <div>
-              <a class="onglets vertical-menu-accueil" href="#">Accueil</a>
+              <a class="onglets vertical-menu-accueil" href="accueil.php">Accueil</a>
               <a class="nos-produits vertical-menu-produit" href="#">Nos produits</a>
-              <a class="onglets vertical-menu" href="#">Bulbes</a>
-              <a class="onglets vertical-menu" href="#">Plantes à massif</a>
-              <a class="onglets vertical-menu" href="#">Rosiers</a>
+              <a class="onglets vertical-menu" href="listpdt.php">
+                <?php
+
+                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='bul'")or die(print_r($connection->errorInfo()));
+                $donnees = $sql->fetch();
+                echo $donnees['cat_libelle'];
+
+                ?>
+              </a>
+              <a class="onglets vertical-menu" href="listpdt.php">
+                <?php
+
+                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='mas'")or die(print_r($connection->errorInfo()));
+                $donnees = $sql->fetch();
+                echo $donnees['cat_libelle'];
+
+                ?> 
+              </a>
+              <a class="onglets vertical-menu" href="listpdt.php">
+                <?php
+
+                $sql = $connection->query("SELECT cat_libelle FROM categorie WHERE cat_code='ros'")or die(print_r($connection->errorInfo()));
+                $donnees = $sql->fetch();
+                echo $donnees['cat_libelle'];
+
+                ?>
+              </a>
             </div>
           </div>
           
