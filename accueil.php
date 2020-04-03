@@ -1,10 +1,5 @@
 <?php
   include 'Connexion.php';
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -33,34 +28,34 @@
 
         <div class="content">
 
-          <div class="menu">
-            
-            <div>
-                    
-                    <a class="onglets"> 
-                        <form >
-                            <input type="hidden" name="ref" value="accueil.php"><input type="submit" value="Accueil" class="link-lookalike link-lookalike-acceuil"></form> 
-                    </a>
-                  
+          <div class="menu">                    
+            <a class="onglets"> 
+                <form >
+                    <input type="hidden" name="ref" value="accueil.php"><input type="submit" value="Accueil" class="link-lookalike link-lookalike-acceuil">
+                </form> 
+            </a>
+          
 
-                    <b class="nos-produits">Nos produits</b>
-                    <br>
-                    
-                    <a class="onglets test" > 
-                        <form action="listpdt.php">
-                            <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike"></form> 
-                    </a>
-                    
-                    <a class="onglets"> 
-                        <form action="listpdt.php">
-                            <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike"></form>
-                    </a>
-                    
-                    <a class="onglets"> 
-                        <form action="listpdt.php">
-                            <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike"></form> 
-                    </a>
-            </div>
+            <b class="nos-produits">Nos produits</b>
+            <br>
+            
+            <a class="onglets test" > 
+                <form action="listpdt.php">
+                    <input type="hidden" name="ref" value="bulbes"><input type="submit" value="Bulbes" class="link-lookalike">
+                </form> 
+            </a>
+            
+            <a class="onglets"> 
+                <form action="listpdt.php">
+                    <input type="hidden" name="ref" value="plantes"><input type="submit" value="Plantes à massif" class="link-lookalike">
+                </form>
+            </a>
+            
+            <a class="onglets"> 
+                <form action="listpdt.php">
+                    <input type="hidden" name="ref" value="rosiers"><input type="submit" value="Rosiers" class="link-lookalike">
+                </form> 
+            </a>
           </div>
           
           <div>
