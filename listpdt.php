@@ -28,7 +28,7 @@
     <body class='body'>
         
         <header>
-            <h1 class="titre">Société Lafleur</h1>
+            <h1 class="titre"><img src="Images\ACCUEIL.JPG" alt="Fleur accueil" class="img_header">Société Lafleur</h1>
             6, cloitre St Aignan<br>
             45000 Orléans
         </header>
