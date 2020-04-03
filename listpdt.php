@@ -114,7 +114,7 @@
 
 
         <footer>
-            <h2>® copyrights ... réalisé le </h2>
+            <h2 class="pied_page">® copyrights ... réalisé le </h2>
         </footer>
         
     </body>
